@@ -39,9 +39,9 @@
       <h1 class="temp text-black "  id="temp" style="font-size: xx-large; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"></h1>
       <div class="flex">
         
-        <div class="description text-black" id="des" style="font-size: large; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"></div>
+        <div class="description text-black" id="des" style="font-size: large; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"><i class="fa-solid fa-spinner fa-spin-pulse fa-lg" style="color: #050505;"></i></div>
       </div>
-      <div class="humidity p-1 text-black" id="humidity" style="font-size: large; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"><i class="fa-solid fa-spinner fa-spin-pulse fa-lg" style="color: #050505;"></i></div>
+      <div class="humidity p-1 text-black" id="humidity" style="font-size: large; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"></div>
       <div class="wind p-1 text-black" id="windSpeed" style="font-size: large; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"></div>
       <!-- <div class="pressure p-1 text-black" id="pressurespeed" style="font-size: large; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"></div> -->
       <p class="p-1" id="div"></p>
@@ -72,16 +72,16 @@
       cityName= search
       temp1=parseInt(dataArray.main.temp-273.15)
       wthr=dataArray.weather[0].description
-      humi=dataArray.main.humidity
-    //   wind=dataArray.wind.speed
+      // humi=dataArray.main.humidity
+      wind=dataArray.wind.speed
     //   pre=dataArray.main.pressure
 
 
       city.innerHTML=` ${cityName}`
       temp.innerHTML = `${temp1}°C`; 
       des.innerHTML = `<i class="fa-solid fa-cloud" style="color:#23769f;"></i> ${wthr}`;
-      humidity.innerHTML = ` <i class="fa-solid fa-temperature-three-quarters" style="color: #23769f;"></i>  Humidity : ${humi}%`;
-    //   windSpeed.innerHTML=`<i class="fa-solid fa-wind" style="color: #23769f;"></i> Wind speed : ${wind} km/h`
+      // humidity.innerHTML = ` <i class="fa-solid fa-temperature-three-quarters" style="color: #23769f;"></i>  Humidity : ${humi}%`;
+      windSpeed.innerHTML=`<i class="fa-solid fa-wind" style="color: #23769f;"></i> Wind speed : ${wind} km/h`
     //   pressurespeed.innerHTML=`<i class="fa-solid fa-wind" style="color: #23769f;"></i> Wind speed : ${pre} km/h`
 
     }
